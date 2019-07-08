@@ -1,0 +1,162 @@
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRO)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 03-JUL-2019 15:48:27
+  Tracing to file: /tmp/sqlnet/trace/client1_29931.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=LABDG2)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 03-JUL-2019 15:49:15
+  Tracing to file: /tmp/sqlnet/trace/client1_29953.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRO)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 03-JUL-2019 15:53:08
+  Tracing to file: /tmp/sqlnet/trace/client1_30011.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRO)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 03-JUL-2019 16:01:05
+  Tracing to file: /tmp/sqlnet/trace/client1_30167.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRO)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 03-JUL-2019 16:05:10
+  Tracing to file: /tmp/sqlnet/trace/client1_30276.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRW)(CID=(PROGRAM=dgmgrl)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 05-JUL-2019 09:12:19
+  Tracing to file: /tmp/sqlnet/trace/client1_7642.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRW)(CID=(PROGRAM=dgmgrl)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 05-JUL-2019 09:13:14
+  Tracing to file: /tmp/sqlnet/trace/client1_7651.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRW)(CID=(PROGRAM=dgmgrl)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 05-JUL-2019 09:13:38
+  Tracing to file: /tmp/sqlnet/trace/client1_7651.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12514, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=oel2.pb.org)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=oel3.pb.org)(PORT=1521))(FAILOVER=ON)(LOAD_BALANCE=OFF))(CONNECT_DATA=(SERVICE_NAME=LABDGRW)(CID=(PROGRAM=sqlplus)(HOST=oel2.pb.org)(USER=oracle))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 12.2.0.1.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 12.2.0.1.0 - Production
+  Time: 05-JUL-2019 09:14:14
+  Tracing to file: /tmp/sqlnet/trace/client1_7655.trc
+  Tns error struct:
+    ns main err code: 12564
+    TNS-12564: TNS:connection refused
+    ns secondary err code: 0
+    nt main err code: 0
+    nt secondary err code: 0
+    nt OS err code: 0

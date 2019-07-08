@@ -1,0 +1,65 @@
+3. Limitations to Standby Redo Logs
+----------------------------------------------
+
+In a Oracle 9i/10g Data Guard Environment, the RFS Process on the Standby Database receives the Data 
+from the Primary and writes it to Disk (either Standby Redo Logs or Archived Redo Logs).
+
+If you consider using Standby Redo Logs, you must make certain that they are the same size as the Online Redo Logs. 
+If you have different sizes of Online Redo Logs, you have to create corresponding Standby Redo Logs. The RFS process
+won't attach Standby Redo Logs if they are different from the Online Redo Log.It is recommended to have at least one more 
+of Standby Redo Log Group as you have of Online Redo Log Groups per Thread and Size..
+
+Standby Redo Logs are filled with the same information that is written to the Online Redo Logs of the Primary Database. 
+Therefore, only the LGWR can provide this information to the Standby RFS process, so Standby Redo Logs will only
+benefit if you set LGWR as the Transmitter on the Primary Database in the LOG_ARCHIVE_DEST_n Initialization Parameter. 
+Starting with 10.2.0, even the ARCH is able to write into Standby RedoLogs.
+
+The RFS-Process always tries to allocate the next available Standby RedoLog, so it is possible that you encounter a Switch
+ between only two Standby RedoLogs,although you created lots more of them. There's no rota defined here like in
+Online RedoLogs. This is reported in Bug 2722195.
+
+NOTE : Starting with 10.2.0, even the ARCH is able to write into Standby RedoLogs.
+
+4. Differents in the Log Apply Services when using Standby Redo Logs
+--------------------------------------------------------------------
+
+In case you do not have Standby Redo Logs, an Archived Redo Log is created by the RFS process and when it has completed,
+ this Archived Redo Log is appliedto the Standby Database by the MRP (Managed Recovery Process) or the Logical
+Apply in Oracle 10g when using Logical Standby. An open (not fully written) ArchiveLog file cannot be applied on the 
+Standby Database and will not be used in a Failover situation. This causes a certain data loss.
+
+If you have Standby Redo Logs, the RFS process will write into the Standby Redo Log as mentioned above and when a
+ log switch occurs, the Archiver Process of the Standby Database will archive this Standby Redo Log to an Archived Redo Log,
+while the MRP process applies the information to the Standby Database.  In a Failover situation, you will also have access to the 
+information already written in the Standby Redo Logs, so the information will not be lost.
+
+Starting with Oracle 10g you have also the Option to use Real-Time Apply with Physical and Logical Standby Apply. 
+When using Real-Time Apply we directly apply Redo Data from Standby RedoLogs. Real-Time Apply is also not able to apply Redo
+from partial filled ArchiveLogs if there are no Standby RedoLogs. So Standby RedoLogs are mandatory for Real-Time Apply.
+
+NOTE : In 12c DEFAULT MRP will go to REAL TIME APPLY mode.
+
+Default Standby recovery in REAL time apply.
+      SQL>alter database recover managed standby database disconnect;
+
+To Start MRP in non real time apply mode use,(in 12c)
+       SQL>alter database recover managed standby database using archived logfile disconnect;
+
+5. Standby RedoLogs and the Data Guard Broker
+---------------------------------------------
+
+If there is an active Data Guard Broker Configuration on this Data Guard Environment the following Error can be raised 
+in the Data Guard Broker Configuration if the setup Transport Method (LogXptMode) is 'SYNC' or 'ASYNC'
+and there are no Standby RedoLogs configured:
+
+Warning: ORA-16809: multiple warnings detected for the database
+
+In the corresponding DRC.LOG-Files and the Database Status you can find: 
+
+ ORA-16789: standby redo logs not configured
+
+-> So please add corresponding Standby RedoLogs to the Standby Database. 
+As per default the Data Guard Broker tries to start Log Apply Services in Real-Time Apply Mode which is not possible without Standby RedoLogs.
+Note that starting with Oracle 11g ARCH Log Transport Method is deprecated.
+
+

@@ -1,0 +1,2 @@
+SELECT open_mode FROM V$DATABASE
+/
