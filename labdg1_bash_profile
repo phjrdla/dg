@@ -1,0 +1,51 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+ORACLE_BASE=/u01/app/oracle
+export ORACLE_BASE
+
+ORACLE_HOME=/u01/app/oracle/product/12.2/dbhome_1
+export ORACLE_HOME
+
+TNS_ADMIN=$ORACLE_HOME/network/admin
+export $TNS_ADMIN
+
+LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export LD_LIBRARY_PATH
+
+CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+export CLASSPATH
+
+PATH=$PATH:$HOME/bin:$ORACLE_HOME/bin
+export PATH
+
+alias cdoh="cd $ORACLE_HOME"
+alias cdtns="cd $TNS_ADMIN"
+alias cdadmin="cd $ORACLE_BASE/admin"
+
+#AGENT_HOME=/u01/app/oracle/product/agent13c/agent_inst
+#export AGENT_HOME
+
+#alias agentstatus="$AGENT_HOME/bin/emctl status agent"
+#alias agentstart="$AGENT_HOME/bin/emctl start agent"
+#alias agentstop="$AGENT_HOME/bin/emctl stop agent"
+alias cddbs="cd $ORACLE_HOME/dbs"
+#alias cdscr="cd /documents1/scripts"
+alias tlog-labdg1="tail -50f /u01/app/oracle/diag/rdbms/labdg1/LABDG/trace/alert_LABDG.log"
+alias vlog-labdg1="view /u01/app/oracle/diag/rdbms/labdg1/LABDG/trace/alert_LABDG.log"
+#alias tlog-cdbtrn13="tail -f /u01/app/oracle/diag/rdbms/cdbtrn1/CDBTRN13/trace/alert_CDBTRN13.log"
+#alias vlog-cdbtrn13="view /u01/app/oracle/diag/rdbms/cdbtrn1/CDBTRN13/trace/alert_CDBTRN13.log"
+
+#export TWO_TASK=PDB2
+
+#export ORACLE_SID=CDBTRN13
+
+env | sort
+
+#alias cddbs="cd $ORACLE_HOMR/dbs"
+alias nv="env | sort"
